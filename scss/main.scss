@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Bangers", Arial, sans-serif;
+  background-color: black;
+}
+.container{
+  margin: 0 auto;
+  width: 1024px;
+
+}
+//---------------Main layout----------------------------
+.row{
+  color:white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.timer{
+  color: white;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard{
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 50vh;
+  background-color: white;
+  color: black;
+  margin-right: 10%;
+}
+.workoutList{
+  width: 70%;
+}

@@ -1,0 +1,32 @@
+// ex. variables:
+$gap: 0;//gap between columns
+$columns: 3;// number of columns
+$breakpoint: 1050px; //when columns goes next to each-other.
+
+//Grid (don't touch!):
+.container {
+  padding-left: $gap;
+  padding-right: $gap;
+  .row {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+      margin-left: -$gap;
+      margin-right: -$gap;
+    }
+    @for $i from 1 through $columns {
+      .col-#{$i}-#{$columns} {
+        box-sizing: border-box;
+        padding-left: $gap;
+        padding-right: $gap;
+        margin-bottom: 2*$gap;
+
+        @media (min-width: $breakpoint) {
+          width: (100/$columns*$i)*1%;
+          float: left;
+        }
+      }
+    }
+  }
+}

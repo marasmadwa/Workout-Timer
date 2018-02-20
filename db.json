@@ -1,0 +1,109 @@
+{
+  "workouts": [
+
+    {
+      "id": 1,
+      "name": "Angie",
+      "exercises": ["100 Pull-ups", "100 Push-ups","100 Sit-ups","100 Squats"],
+      "descritpion": "For time: Complete all reps of each exercise before moving to the next."
+    },
+    {
+      "id": 2,
+      "name": "Barbara",
+      "exercises": ["20 Pull-ups", "30 Push-ups","40 Sit-ups","50 Squats"],
+      "descritpion": "5 rounds for time."
+    },
+    {
+      "id": 3,
+      "name": "Chelsea",
+      "exercises": ["5 Pull-ups", "10 Push-ups","15 Squats"],
+      "descritpion": "Each min on the min for 30 min."
+    },
+    {
+      "id": 4,
+      "name": "Cindy",
+      "exercises": ["5 Pull-ups", "10 Push-ups","5 Squats"],
+      "descritpion": "As many rounds as possible in 20 min"
+    },
+    {
+      "id": 5,
+      "name": "Diane",
+      "exercises": ["Deadlift 225 lbs", "HSPU"],
+      "descritpion": "21-15-9 reps, for time"
+    },
+    {
+      "id": 6,
+      "name": "Elizabeth",
+      "exercises": ["Clean 135 lbs", "Ring Dips","",""],
+      "descritpion": "21-15-9 reps, for time"
+    },
+
+    {
+      "id": 7,
+      "name": "Fran",
+      "exercises": ["Thruster 95 lbs", "Pull-ups"],
+      "descritpion": "21-15-9 reps, for time"
+    },
+    {
+      "id": 8,
+      "name": "Grace",
+      "exercises": ["Clean and Jerk 135 lbs"],
+      "descritpion": "30 reps for time"
+    },
+    {
+      "id": 9,
+      "name": "Helen",
+      "exercises": ["400 meter run", "1.5 pood Kettlebell swing x 21","Pull-ups 12 reps","3 rounds for time"],
+      "descritpion": ""
+    },
+    {
+      "id": 10,
+      "name": "Isabel",
+      "exercises": ["Snatch 135 pounds"],
+      "descritpion": "30 reps for time"
+    },
+    {
+      "id": 11,
+      "name": "Jackie",
+      "exercises": ["1000 meter row", "50 Thruster (45 lbs)","30 Pull-ups"],
+      "descritpion": "For time"
+    },
+
+    {
+      "id": 12,
+      "name": "Karen",
+      "exercises": ["Wall-ball 150 shots"],
+      "descritpion": "For time"
+    },
+    {
+      "id": 13,
+      "name": "Linda aka “3 bars of death”",
+      "exercises": ["Deadlift 1 1/2 BW", "Bench BW","Clean 3/4 BW"],
+      "descritpion": "10/9/8/7/6/5/4/3/2/1 rep rounds for time "
+    },
+    {
+      "id": 14,
+      "name": "Mary",
+      "exercises": ["5 HSPU", "10 1-legged squats","15 Pull-ups"],
+      "descritpion": "As many rounds as possible in 20 min"
+    },
+
+    {
+      "id": 15,
+      "name": "Nancy",
+      "exercises": ["400 meter run", "Overhead squat 95 lbs x 15"],
+      "descritpion": "5 rounds for time"
+    },
+
+    {
+
+      "name": "",
+      "exercises": ["", "","",""],
+      "descritpion": ""
+    }
+  ]
+
+}
+
+
+
