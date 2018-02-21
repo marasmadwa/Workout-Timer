@@ -1,19 +1,22 @@
 import React from "react";
 
-class WorkoutName extends React.Component {
+class BenchmarkGirlName extends React.Component {
+
     render() {
         return (
-            <h3 onClick={this.props.show}>{this.props.name}</h3>
+            <span onClick={this.props.show}>{this.props.name}</span>
         )
     }
 }
 
-class Exercises extends React.Component {
+
+class BenchmarkWorkout extends React.Component {
     render() {
         return this.props.isOpen && (
             <div>
-                {this.props.exercises}
-                {this.props.description}
+                {this.props.workout.exercise}
+                {this.props.workout.description}
+                <button onClick={()=>{this.props.workoutName(this.props.workout.name)}}>this one!</button>
             </div>
         )
     }
@@ -37,8 +40,8 @@ class Workout extends React.Component {
     render() {
         return (
             <li>
-                <WorkoutName name={this.props.data.name} show={this.showWorkout}/>
-                <Exercises exercises={this.props.data.exercises} description={this.props.data.description} isOpen={this.state.open}/>
+                <BenchmarkGirlName name={this.props.data.name} show={this.showWorkout}/>
+                <BenchmarkWorkout workout = {this.props.data} isOpen={this.state.open} workoutName = {this.props.workoutName}/>
             </li>
         )
     }
@@ -49,8 +52,9 @@ export default class ChooseYourWorkout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            workouts: []
+            workouts: [],
         };
+
 
         fetch(`http://localhost:3000/workouts`)
             .then(response => {
@@ -70,22 +74,18 @@ export default class ChooseYourWorkout extends React.Component {
     }
 
     render() {
-        // console.log(this.state)
         const workouts = this.state.workouts.map(workout => {
-            return <Workout key={workout.id} data={workout}/>
+            return <Workout key={workout.name} data={workout} workoutName={this.props.workoutName}/>
         });
         return (
-            <div className='workoutList'>
+            <div className="workoutBox">
                 <h1>choose your workout!</h1>
-                <ul>
-                    <li>the benchmark girls
-                        <ul>
+                <ul className='workoutList'>
+                    <li> > the benchmark girls
+                        <ul className="innerWorkoutList">
                             {workouts}
                         </ul>
                     </li>
-                    <li>hero wods</li>
-                    <li>tabata</li>
-                    <li>stopwatch</li>
                 </ul>
             </div>
         )

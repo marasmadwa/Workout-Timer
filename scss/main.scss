@@ -1,42 +1,80 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers');
-*{
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: "Bangers", Arial, sans-serif;
   background-color: black;
 }
-.container{
+
+.container {
   margin: 0 auto;
   width: 1024px;
 
 }
+
 //---------------Main layout----------------------------
-.row{
-  color:white;
+.row {
+  color: white;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
-.timer{
+
+.timer {
+  font-family: "Orbitron", Arial, sans-serif;
   color: white;
   font-size: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
-.dashboard{
+
+.dashboard {
   padding-top: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 30%;
   height: 50vh;
   background-color: white;
   color: black;
   margin-right: 10%;
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
-.workoutList{
+
+//------------------------Choose your Workout------------
+
+.workoutBox {
   width: 70%;
+  h1 {
+    font-size: 70px;
+  }
+}
+
+.workoutList {
+  font-size: 50px;
+  list-style: none;
+}
+
+.innerWorkoutList {
+  font-size: 20px;
+}
+
+.workoutList li ul {
+  display: none;
+}
+
+.workoutList li:hover ul {
+  display: block;
 }

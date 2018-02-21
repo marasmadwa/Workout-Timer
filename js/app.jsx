@@ -5,11 +5,43 @@ import MainLayout from './MainLayout.jsx';
 
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            timer: 0,
+            name: '',
+            scores: []
+        }
+    }
+
+    getWorkoutName = (name) => {
+        this.setState({
+            name: name
+        })
+    };
+
+    getWorkoutTime = (time) => {
+        this.setState({
+            timer: time
+        }, ()=>{
+            const score = {
+                name: this.state.name,
+                timer: this.state.timer
+            };
+            this.setState({
+                scores: [...this.state.scores,score]
+            })
+        })
+
+    };
+
+
+
     render() {
         return (
             <div className='container'>
-                <Timer/>
-                <MainLayout/>
+                <Timer timer = {this.getWorkoutTime}/>
+                <MainLayout scores = {this.state.scores} workoutName={this.getWorkoutName}/>
             </div>
         )
     }

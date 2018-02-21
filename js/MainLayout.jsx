@@ -7,8 +7,8 @@ export default class MainLayout extends React.Component {
     render() {
         return (
             <div className='row'>
-                <DashBoard/>
-                <ChooseYourWorkout/>
+                <DashBoard scores ={this.props.scores}/>
+                <ChooseYourWorkout workoutName = {this.props.workoutName}/>
             </div>
         )
     }
