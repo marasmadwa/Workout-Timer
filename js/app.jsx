@@ -23,26 +23,29 @@ class App extends React.Component {
     getWorkoutTime = (time) => {
         this.setState({
             timer: time
-        }, ()=>{
+        }, () => {
             const score = {
                 name: this.state.name,
                 timer: this.state.timer
             };
             this.setState({
-                scores: [...this.state.scores,score]
+                scores: [...this.state.scores, score]
             })
         })
 
     };
 
 
-
     render() {
         return (
-            <div className='container'>
-                <Timer timer = {this.getWorkoutTime}/>
-                <MainLayout scores = {this.state.scores} workoutName={this.getWorkoutName}/>
-            </div>
+            <section className='mainLayout'>
+                <div className='container'>
+                    <div className='workoutZone'>
+                        <Timer timer={this.getWorkoutTime}/>
+                        <MainLayout scores={this.state.scores} workoutName={this.getWorkoutName}/>
+                    </div>
+                </div>
+            </section>
         )
     }
 }

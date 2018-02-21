@@ -12,7 +12,7 @@ export default class DashBoard extends React.Component {
         });
         return (
             <div className='dashboard'>
-                <h2>dashboard:</h2>
+                <h2>dashboard :</h2>
                 <ul>
                     {choosenWorkouts}
                 </ul>

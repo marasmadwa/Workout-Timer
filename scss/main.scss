@@ -14,12 +14,32 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1024px;
+  width: 1350px;
 
 }
 
 //---------------Main layout----------------------------
+
+.mainLayout {
+  background: linear-gradient(rgba(#444, 0.64), rgba(#444, 0.64)),
+  url("../images/crossfit.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workoutZone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
 .row {
+  padding: 30px;
+  width: 100%;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -28,12 +48,13 @@ body {
 
 .timer {
   font-family: "Orbitron", Arial, sans-serif;
-  color: white;
   font-size: 100px;
+  color: #000066;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  text-shadow:  0 0 3px red, 0 0 30px red;
 }
 
 .dashboard {
@@ -42,39 +63,66 @@ body {
   flex-direction: column;
   align-items: center;
   width: 30%;
-  height: 50vh;
+  height: 100vh;
   background-color: white;
   color: black;
-  margin-right: 10%;
+  opacity: 0.8;
+  transition: 0.5s all;
   ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 }
+.dashboard:hover{
+  background-color: red;
+  color: white;
+}
 
 //------------------------Choose your Workout------------
 
 .workoutBox {
   width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   h1 {
     font-size: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  ul {
+    text-align: center;
   }
 }
 
 .workoutList {
   font-size: 50px;
   list-style: none;
+  columns: 2;
+  position: relative;
+  ul {
+    padding-top: 10px;
+    border: 1px solid white;
+  }
+  ul li{
+    list-style: none;
+    font-size: 30px;
+  }
 }
 
-.innerWorkoutList {
-  font-size: 20px;
-}
+.strBtn, .stBtn, .resBtn{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-family: "Bangers", Arial, sans-serif;
+  font-size: 30px;
 
-.workoutList li ul {
-  display: none;
-}
 
-.workoutList li:hover ul {
-  display: block;
+
 }

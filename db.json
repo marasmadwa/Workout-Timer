@@ -4,7 +4,7 @@
     {
       "id": 1,
       "name": "Angie",
-      "exercises": ["100 Pull-ups", "100 Push-ups","100 Sit-ups","100 Squats"],
+      "exercises": ["100 Pull-ups", "100 Push-ups", "100 Sit-ups", "100 Squats"],
       "descritpion": "For time: Complete all reps of each exercise before moving to the next."
     },
     {
@@ -34,7 +34,7 @@
     {
       "id": 6,
       "name": "Elizabeth",
-      "exercises": ["Clean 135 lbs", "Ring Dips","",""],
+      "exercises": ["Clean 135 lbs", "Ring Dips"],
       "descritpion": "21-15-9 reps, for time"
     },
 
@@ -93,13 +93,6 @@
       "name": "Nancy",
       "exercises": ["400 meter run", "Overhead squat 95 lbs x 15"],
       "descritpion": "5 rounds for time"
-    },
-
-    {
-
-      "name": "",
-      "exercises": ["", "","",""],
-      "descritpion": ""
     }
   ]
 

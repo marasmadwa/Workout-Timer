@@ -14,9 +14,17 @@ class BenchmarkWorkout extends React.Component {
     render() {
         return this.props.isOpen && (
             <div>
-                {this.props.workout.exercise}
-                {this.props.workout.description}
-                <button onClick={()=>{this.props.workoutName(this.props.workout.name)}}>this one!</button>
+                <ul>
+                    <li>{this.props.workout.exercises[0]}</li>
+                    <li>{this.props.workout.exercises[1]}</li>
+                    <li>{this.props.workout.exercises[2]}</li>
+                    <li>{this.props.workout.exercises[3]}</li>
+                    <li>{this.props.workout.descritpion}</li>
+                    <button onClick={() => {
+                        this.props.workoutName(this.props.workout.name)
+                    }}>this one!
+                    </button>
+                </ul>
             </div>
         )
     }
@@ -41,7 +49,8 @@ class Workout extends React.Component {
         return (
             <li>
                 <BenchmarkGirlName name={this.props.data.name} show={this.showWorkout}/>
-                <BenchmarkWorkout workout = {this.props.data} isOpen={this.state.open} workoutName = {this.props.workoutName}/>
+                <BenchmarkWorkout workout={this.props.data} isOpen={this.state.open}
+                                  workoutName={this.props.workoutName}/>
             </li>
         )
     }
@@ -80,12 +89,9 @@ export default class ChooseYourWorkout extends React.Component {
         return (
             <div className="workoutBox">
                 <h1>choose your workout!</h1>
+                <h2> > the benchmark girls :</h2>
                 <ul className='workoutList'>
-                    <li> > the benchmark girls
-                        <ul className="innerWorkoutList">
-                            {workouts}
-                        </ul>
-                    </li>
+                    <li>{workouts}</li>
                 </ul>
             </div>
         )
