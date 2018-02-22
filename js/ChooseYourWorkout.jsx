@@ -20,7 +20,7 @@ class BenchmarkWorkout extends React.Component {
                     <li>{this.props.workout.exercises[2]}</li>
                     <li>{this.props.workout.exercises[3]}</li>
                     <li>{this.props.workout.descritpion}</li>
-                    <button onClick={() => {
+                    <button className='thisWorkoutBtn' onClick={() => {
                         this.props.workoutName(this.props.workout.name)
                     }}>this one!
                     </button>
@@ -40,9 +40,15 @@ class Workout extends React.Component {
     }
 
     showWorkout = () => {
-        this.setState({
-            open: true
-        })
+        if (this.state.open === false) {
+            this.setState({
+                open: true
+            })
+        } else {
+            this.setState({
+                open: false
+            })
+        }
     };
 
     render() {
