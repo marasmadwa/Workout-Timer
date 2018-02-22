@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Timer from './Timer.jsx';
 import MainLayout from './MainLayout.jsx';
+import UserName from './UserName.jsx';
 
 
 class App extends React.Component {
@@ -10,7 +11,8 @@ class App extends React.Component {
         this.state = {
             timer: 0,
             name: '',
-            scores: []
+            scores: [],
+            athlete: ''
         }
     }
 
@@ -26,7 +28,8 @@ class App extends React.Component {
         }, () => {
             const score = {
                 name: this.state.name,
-                timer: this.state.timer
+                timer: this.state.timer,
+                athlete: this.state.athlete
             };
             this.setState({
                 scores: [...this.state.scores, score]
@@ -35,12 +38,19 @@ class App extends React.Component {
 
     };
 
+    getAthleteName = (event)=>{
+        this.setState({
+            [event.target.id] : event.target.value
+        })
+    };
+
 
     render() {
         return (
             <section className='mainLayout'>
                 <div className='container'>
                     <div className='workoutZone'>
+                        <UserName athleteName = {this.getAthleteName}/>
                         <Timer timer={this.getWorkoutTime}/>
                         <MainLayout scores={this.state.scores} workoutName={this.getWorkoutName}/>
                     </div>

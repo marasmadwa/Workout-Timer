@@ -134,12 +134,27 @@ body {
     padding: 10px;
     border: 1px solid white;
     border-radius: 5px;
+    //animation-name: slide;
+    //animation-iteration-count: initial;
+    //animation-duration: 2s;
+    //animation-direction: alternate;
+    //overflow: hidden;
+    transition:2s ease-in all;
   }
   ul li {
     list-style: none;
     font-size: 30px;
   }
 }
+
+//@keyframes slide {
+//0%{
+//  height: 0;
+//}
+//  100%{
+//    height: auto;
+//  }
+//}
 .thisWorkoutBtn{
   color: black;
   width: 100px;

@@ -23,7 +23,9 @@ export default class DashBoard extends React.Component {
             };
 
 
-            return <li key={scores.name}>your workout: {scores.name} <br/>
+            return <li key={scores.name}>
+                athlete name: {scores.athlete}
+                your workout: {scores.name} <br/>
                 your time: {formatedTime(scores.timer)}</li>
         });
         return (
@@ -37,4 +39,3 @@ export default class DashBoard extends React.Component {
     }
 }
 
-// {scores.timer} to do your time jak coś!
