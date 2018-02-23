@@ -1,0 +1,61 @@
+
+//----------------Timer-----------------
+.timer {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Orbitron", Arial, sans-serif;
+  font-size: 100px;
+  color: red;
+  text-shadow: 0 0 3px red, 0 0 30px red;
+  background: rgba(255, 255, 255, .3);
+  border-radius: 20px;
+  border: 3px solid #333333;
+  .hours, .minutes, .seconds, .hundredOfSeconds {
+    margin-right: 40px;
+    display: inline-block;
+    width: 100px;
+  }
+
+}
+
+.strBtn, .stBtn, .resBtn {
+  display: inline;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-family: "Bangers", Arial, sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 20px black;
+  background-image: url("../images/barbell.png");
+  background-position: center;
+  background-size: cover;
+  color: whitesmoke;
+  transition: 0.5s all;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.strBtn:active {
+  transform: translateY(20px);
+}
+.strBtn:hover {
+  font-size: 40px;
+}
+
+.stBtn:hover {
+  font-size: 40px;
+}
+.stBtn:active {
+  transform: translateY(20px);
+}
+
+.resBtn:hover {
+  font-size: 40px;
+}
+.resBtn:active {
+  transform: translateY(20px);
+}

@@ -1,0 +1,77 @@
+
+//------------------------Choose your Workout------------
+
+.workoutBox {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px black;
+  }
+  h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px black;
+  }
+  ul {
+    text-align: center;
+  }
+}
+
+.workoutList {
+  text-shadow: 0 0 20px #FF0000;
+  font-size: 50px;
+  list-style: none;
+  columns: 2;
+  position: relative;
+  ul {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    //animation-name: slide;
+    //animation-iteration-count: initial;
+    //animation-duration: 2s;
+    //animation-direction: alternate;
+    //overflow: hidden;
+    transition:2s ease-in all;
+  }
+  ul li {
+    list-style: none;
+    font-size: 30px;
+  }
+}
+
+//@keyframes slide {
+//0%{
+//  height: 0;
+//}
+//  100%{
+//    height: auto;
+//  }
+//}
+.thisWorkoutBtn{
+  color: black;
+  width: 100px;
+  height: 50px;
+  transition: 0.5s all;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-family: "Bangers", Arial, sans-serif;
+  font-size: 20px;
+  background: rgba(255, 255, 255, .5);
+  outline: none;
+}
+.thisWorkoutBtn:hover {
+  font-size: 25px;
+  background: rgba(255, 0, 0, .5);
+  color: white;
+}
+.thisWorkoutBtn:active {
+  transform: translateY(20px);
+}

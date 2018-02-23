@@ -1,0 +1,45 @@
+
+//-------------------UserNAme----------------------
+.athleteBox{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+ .error{
+   color: red;
+   animation: glow2 0.5s infinite alternate;
+   display: flex;
+   justify-content: flex-end;
+
+ }
+}
+.athleteInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 50px;
+  animation: glow 0.5s infinite alternate;
+  color: white;
+
+  input{
+    padding-left: 10px;
+    font-family: "Bangers", Arial, sans-serif;
+    font-size: 30px;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border-radius: 10px;
+    border: 3px solid #333333;
+    margin-left: 20px;
+  }
+}
+
+@keyframes glow {
+  100%{
+    text-shadow: 0 0 50px black;
+  }
+}
+@keyframes glow2 {
+  100%{
+    text-shadow: 0 0 50px red;
+  }
+}

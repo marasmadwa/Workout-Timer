@@ -5,7 +5,10 @@ const houndredOfSeconds = (sec) => {
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     return <div className='StopWatch'>
-    <span className='hours'>{(hours < 10 ? '0' + hours : hours) % 60}</span>  : <span className='minutes'>{(minutes < 10 ? '0' + minutes : minutes) % 60}</span> : <span className='seconds'>{(seconds < 10 ? '0' + seconds : seconds) % 60}</span> : <span className='hundredOfSeconds'>{('0' + sec % 100).slice(-2)}</span>
+        <span className='hours'>{(hours < 10 ? '0' + hours : hours) % 60}</span> : <span
+        className='minutes'>{(minutes < 10 ? '0' + minutes : minutes) % 60}</span> : <span
+        className='seconds'>{(seconds < 10 ? '0' + seconds : seconds) % 60}</span> : <span
+        className='hundredOfSeconds'>{('0' + sec % 100).slice(-2)}</span>
     </div>
 };
 // return (hours < 10 ? '0' + hours : hours) % 60 + ' : ' + (minutes < 10 ? '0' + minutes : minutes) % 60 + ' : ' + (seconds < 10 ? '0' + seconds : seconds) % 60 + ' : ' + ('0' + sec % 100).slice(-2);
@@ -21,10 +24,21 @@ export default class Timer extends React.Component {
     }
 
     handleStartClick() {
-        this.counter = setInterval(() =>
-            this.setState({
-                hundredOfSecondsRun: this.state.hundredOfSecondsRun + 1
-            }), 10);
+        if (this.props.athlete === "") {
+            event.preventDefault();
+            this.props.error("Write your name dude!");
+            // console.log(this.props.error)
+        }
+       else if (this.props.athlete.length <= 2) {
+            event.preventDefault();
+            this.props.error("Your name must have at least 3 chars dude!");
+        } else if (this.props.athlete.length > 2){
+            this.props.error(' ');
+            this.counter = setInterval(() =>
+                this.setState({
+                    hundredOfSecondsRun: this.state.hundredOfSecondsRun + 1
+                }), 10);
+        }
     }
 
     handleStopClick() {
@@ -45,16 +59,16 @@ export default class Timer extends React.Component {
     render() {
         return (
             <div className='timer'>
-                    {houndredOfSeconds(this.state.hundredOfSecondsRun)}
+                {houndredOfSeconds(this.state.hundredOfSecondsRun)}
 
-                    {(this.state.hundredOfSecondsRun === 0 || this.counter === this.state.stopCounter ?
-                            <button className='strBtn' onClick={this.handleStartClick.bind(this)}>Start!</button>
-                            : <button className="stBtn" onClick={this.handleStopClick.bind(this)}>Stop!</button>
-                    )}
+                {(this.state.hundredOfSecondsRun === 0 || this.counter === this.state.stopCounter ?
+                        <button className='strBtn' onClick={this.handleStartClick.bind(this)}>Start!</button>
+                        : <button className="stBtn" onClick={this.handleStopClick.bind(this)}>Stop!</button>
+                )}
 
-                    {(this.state.hundredOfSecondsRun !== 0 && this.counter === this.state.stopCounter ?
-                            <button className='resBtn' onClick={this.handleResetClick.bind(this)}>Reset</button> : null
-                    )}
+                {(this.state.hundredOfSecondsRun !== 0 && this.counter === this.state.stopCounter ?
+                        <button className='resBtn' onClick={this.handleResetClick.bind(this)}>get score!</button> : null
+                )}
             </div>
         )
     }

@@ -6,7 +6,6 @@ export default class DashBoard extends React.Component {
     render() {
         const choosenWorkouts = this.props.scores.map(scores => {
             // console.log(scores);
-            // const formatedTime = scores.timer * 0.01;
 
             const formatedTime = (scores) => {
                 scores = Number(scores);
@@ -24,7 +23,7 @@ export default class DashBoard extends React.Component {
 
 
             return <li key={scores.name}>
-                athlete name: {scores.athlete}
+                athlete name: {scores.athlete} <br/>
                 your workout: {scores.name} <br/>
                 your time: {formatedTime(scores.timer)}</li>
         });

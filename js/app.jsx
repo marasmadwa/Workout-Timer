@@ -12,9 +12,16 @@ class App extends React.Component {
             timer: 0,
             name: '',
             scores: [],
-            athlete: ''
+            athlete: '',
+            error: ""
         }
     }
+
+    setError = (error) =>{
+        this.setState({
+            error: error
+        })
+    };
 
     getWorkoutName = (name) => {
         this.setState({
@@ -34,14 +41,15 @@ class App extends React.Component {
             this.setState({
                 scores: [...this.state.scores, score]
             })
-        })
+        });
 
     };
 
-    getAthleteName = (event)=>{
+    getAthleteName = (event) => {
         this.setState({
-            [event.target.id] : event.target.value
-        })
+            error: this.state.error,
+            [event.target.id]: event.target.value
+        });
     };
 
 
@@ -50,8 +58,8 @@ class App extends React.Component {
             <section className='mainLayout'>
                 <div className='container'>
                     <div className='workoutZone'>
-                        <UserName athleteName = {this.getAthleteName}/>
-                        <Timer timer={this.getWorkoutTime}/>
+                        <UserName athleteName={this.getAthleteName} error = {this.state.error} />
+                        <Timer timer={this.getWorkoutTime} athlete={this.state.athlete} error={this.setError}/>
                         <MainLayout scores={this.state.scores} workoutName={this.getWorkoutName}/>
                     </div>
                 </div>
