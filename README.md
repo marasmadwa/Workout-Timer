@@ -6,7 +6,7 @@ My version of Workout Timer for Cross trening. Icludes: The Benchmark Girls WOD'
 Project use local database from db.json.
 
 ## Prerequisites
-If you want to run my project all you have to do is install webpack and jsonserver. Webpack configuration is already included in my project (take a look to webpack.config.js). 
+If you want to run my project all you have to do is install *webpack* and *jsonserver*. Webpack configuration is already included in my project (take a look to *webpack.config.js*). 
 
 Installing Webpack:
 
