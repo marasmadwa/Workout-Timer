@@ -1,6 +1,6 @@
 # Workout-Timer
 
-My version of Workout Timer for Cross trening. Icludes: The Benchmark Girls WOD's.
+My version of Workout Timer for Cross training. Includes: The Benchmark Girls WOD's.
 
 ## Getting Started
 Project use local database from db.json.
