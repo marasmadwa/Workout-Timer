@@ -24,7 +24,7 @@ when it is installed, from the command line, run the following command:
 
 `$ json-server --watch db.json`
 
-now if you go to: http://localhost:3000/workouts you'll get workouts array. For exaple:
+now if you go to: http://localhost:3000/workouts you'll get workouts array. For example:
 
 `{
     "id": 1,
