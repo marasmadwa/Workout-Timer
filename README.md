@@ -1,6 +1,6 @@
 # Workout-Timer
 
-My version of Workout Timer for Cross trening. Icludes: The Benchmark Girls WOD's.
+My version of Workout Timer for Cross training. Includes: The Benchmark Girls WOD's.
 
 ## Getting Started
 Project use local database from db.json.
@@ -24,7 +24,7 @@ when it is installed, from the command line, run the following command:
 
 `$ json-server --watch db.json`
 
-now if you go to: http://localhost:3000/workouts you'll get workouts array. For exaple:
+now if you go to: http://localhost:3000/workouts you'll get workouts array. For example:
 
 `{
     "id": 1,
@@ -39,3 +39,7 @@ now if you go to: http://localhost:3000/workouts you'll get workouts array. For 
   },`
 
 Now you are ready to go and test my app :)
+
+### Project preview:
+
+![alt text](https://raw.githubusercontent.com/marasmadwa/Workout-Timer/master/images/WorkoutTimerLayout.jpg)
