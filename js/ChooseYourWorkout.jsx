@@ -62,12 +62,23 @@ class Workout extends React.Component {
     }
 }
 
+class RandomWod extends React.Component {
+    render() {
+        return (
+            <li>
+                {this.props.data.name}
+                {this.props.data.exercises}
+            </li>
+        )
+    }
+}
 
 export default class ChooseYourWorkout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             workouts: [],
+            randomWod: []
         };
 
 
@@ -85,19 +96,43 @@ export default class ChooseYourWorkout extends React.Component {
                 this.setState({
                     workouts: data
                 })
-            })
+            });
+
+        // fetch(`http://localhost:3000/randomWod`)
+        //     .then(response => {
+        //         // console.log(response);
+        //         if (response.ok) {
+        //             return response.json();
+        //         } else {
+        //             throw new Error('err');
+        //         }
+        //     })
+        //     .then(data => {
+        //         console.log(data);
+        //         this.setState({
+        //             randomWod: data
+        //         })
+        //     })
     }
 
     render() {
         const workouts = this.state.workouts.map(workout => {
             return <Workout key={workout.name} data={workout} workoutName={this.props.workoutName}/>
         });
+        const randomWod = this.state.randomWod.map(randomWod => {
+            return <RandomWod key={randomWod.name} data={randomWod}/>
+        });
         return (
             <div className="workoutBox">
                 <h1>choose your workout!</h1>
-                <h2> > the benchmark girls :</h2>
+                <h2> > the benchmark girls:</h2>
                 <ul className='workoutList'>
                     <li>{workouts}</li>
+                </ul>
+                {/*<h2> > Random WOD:</h2>*/}
+                {/*<button className='randomWodBtn'>Get Random WOD!</button>*/}
+                <ul className='randomWod'>
+                    <li>{randomWod}</li>
                 </ul>
             </div>
         )

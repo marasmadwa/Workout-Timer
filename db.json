@@ -94,8 +94,56 @@
       "exercises": ["400 meter run", "Overhead squat 95 lbs x 15"],
       "descritpion": "5 rounds for time"
     }
-  ]
+  ],
 
+  "randomWod": [
+
+    {
+      "id": 1,
+      "name": "AMRAP",
+      "exercises": ["amrap 7", "8 hspu", "16 kb snatches alt 20/12kg"]
+    },
+
+    {
+      "id": 2,
+      "name": "Power Clean",
+      "exercises": ["3 reps every 2 min for 6 sets at 70-75% of max"]
+    },
+
+    {
+      "id": 3,
+      "name": "TGU",
+      "exercises": ["50 tgu alt – 16/8kg", "every 10 reps run 3 laps + 10 burpees"]
+    },
+    {
+      "id": 4,
+      "name": "HERO “Whitten” ",
+      "exercises": ["5 rounds for time of: ", "22 KBS 24/16kg", "22 box jumps 60/50cm ", "400m run/400m row/16 shuttle runs", "22 burpees", "22 wb shots 9/6kg", "TC 20'"]
+    },
+    {
+      "id": 5,
+      "name": "AMRAP 15'",
+      "exercises": ["3 wal climbs", "5 Strict pull ups", "10 Lunges with KB in goblet hold 24/16kg", "15 KBS 24/16kg"]
+    },
+
+    {
+      "id": 6,
+      "name": "AMRAP 20'",
+      "exercises": ["6 Box jumps 60/50", "9 Front squats @60/35 from the floor", "12 T2B", "6 Box jumps", "9 Front squats", "12 pull ups"]
+    },
+
+    {
+      "id": 7,
+      "name": "For Time",
+      "exercises": ["15-13-9-7-5", "S2OH @50/30kg", "WTD sit-ups with medball", "50-40-30-20-10", "DU’s"]
+    },
+
+    {
+      "id": 4,
+      "name": "",
+      "exercises": ["", "", ""]
+    }
+  ]
 }
 
 
