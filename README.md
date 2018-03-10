@@ -11,6 +11,7 @@ If you want to run my project all you have to do is install *webpack* and *jsons
 Installing Webpack:
 
 `npm install --save-dev webpack`
+
 `npm i`
 
 then use my webpack.config.js and from the command line, to run webpack use the following command:
