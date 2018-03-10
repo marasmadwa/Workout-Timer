@@ -42,6 +42,10 @@ now if you go to: http://localhost:3000/workouts you'll get workouts array. For 
 
 Now you are ready to go and test my app :)
 
+###Try by yourself !
+
+[WorkoutTimer](http://52.214.72.216:3001/)
+
 ### Project preview:
 
 ![alt text](https://raw.githubusercontent.com/marasmadwa/Workout-Timer/master/images/WorkoutTimerLayout.jpg)
