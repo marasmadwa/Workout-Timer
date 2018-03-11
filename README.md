@@ -48,4 +48,4 @@ Now you are ready to go and test my app :)
 
 ### Project preview:
 
-![alt text](https://raw.githubusercontent.com/marasmadwa/Workout-Timer/master/images/WorkoutTimerLayout.jpg)
+![alt text](https://github.com/marasmadwa/Workout-Timer/blob/master/images/page_layout.png)
