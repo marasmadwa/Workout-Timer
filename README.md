@@ -3,7 +3,7 @@
 My version of Workout Timer for Cross training. Includes: The Benchmark Girls WOD's.
 
 ## Getting Started
-Project use local database from db.json.
+Project use local data from db.json.
 
 ## Prerequisites
 If you want to run my project all you have to do is install *webpack* and *jsonserver*. Webpack configuration is already included in my project (take a look to *webpack.config.js*). 
@@ -12,9 +12,11 @@ Installing Webpack:
 
 `npm install --save-dev webpack`
 
-then use my webpack.config.js and from the command line, run the following command:
+`npm i`
 
-`webpack-dev-server`
+then use my webpack.config.js and from the command line, to run webpack use the following command:
+
+`npm run dev`
 
 Installing json server:
 
@@ -39,6 +41,10 @@ now if you go to: http://localhost:3000/workouts you'll get workouts array. For 
   },`
 
 Now you are ready to go and test my app :)
+
+### Try by yourself !
+
+[WorkoutTimer](http://52.214.72.216:3001/)
 
 ### Project preview:
 
