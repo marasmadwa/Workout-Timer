@@ -1,6 +1,6 @@
 # Workout-Timer
 
-My version of Workout Timer for Cross training. Includes: The Benchmark Girls WOD's.
+My version of Workout Timer for Cross training. Includes: The Benchmark Girls WOD's. Why are the Crossfit Workouts named after girls? According to CrossFit Founder Greg Glassman he named the benchmark workouts after girls (in similar way that storms are named after girls) by the National Weather Service. He felt that because these workouts are so physically demanding that they leave you feeling as though a storm hit you.
 
 ## Getting Started
 Project use local data from db.json.
